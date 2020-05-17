@@ -1,0 +1,4 @@
+python manage.py createsuperuser 
+id : user 
+pwd : 1234
+copy hotel_form.html to ./templates/

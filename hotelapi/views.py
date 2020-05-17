@@ -8,9 +8,10 @@ from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import MessageEvent, PostbackEvent
 from module import func
 from urllib.parse import parse_qsl
-
+from linebot.models import MessageEvent, TextMessage, TextSendMessage #daphne add 20200517
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
+line_bot_api.push_message('Ub8e3cf75739079f25a50f82b2cbd4c63', TextSendMessage(text='你可以開始了'))
 line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='你可以開始了'))
 from hotelapi.models import users
 

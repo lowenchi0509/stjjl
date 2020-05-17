@@ -11,6 +11,7 @@ from urllib.parse import parse_qsl
 
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
+line_bot_api.push_message('Uaa63a3f5feff2725536db7d81f09c929', TextSendMessage(text='你可以開始了'))
 from hotelapi.models import users
 
 @csrf_exempt
